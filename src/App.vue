@@ -2,6 +2,7 @@
   <div id="app">
      <input type='button' value='增加' @click='increment'/>
      <input type='button' value='减少' @click='decrement'/>
+     <input type='button' value='偶数才能增加' @click='oddAdd'/>
      <div>
        现在的数字为:{{count}}
      </div>
@@ -9,13 +10,13 @@
 </template>
 
 <script>
-import {mapGetters,mapActions} from 'vuex';
+import {mapGetters,mapActions} from 'vuex'
 
 export default {
   name: 'App',
   computed:mapGetters(['count']),
-  methods:mapActions(['increment','decrement'])
- 
+  methods:mapActions(['increment','decrement','oddAdd'])
+
 }
 </script>
 
